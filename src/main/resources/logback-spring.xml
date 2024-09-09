@@ -1,0 +1,15 @@
+<configuration>
+
+    <!-- Console Appender: untuk menampilkan log di konsol -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{dd-MM-yyyy HH:mm:ss.SSS} %-6level %-50logger{0} : %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Root logger untuk seluruh aplikasi -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+    </root>
+
+</configuration>
