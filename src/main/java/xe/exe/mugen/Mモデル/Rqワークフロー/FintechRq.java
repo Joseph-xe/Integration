@@ -19,9 +19,9 @@ public class FintechRq {
     @NotBlank(message = "Mitra Fintech Tidak Terisi")
     // ADD NOT IN BUSINESS PARAMETER
     private String mitraFintech;
-    @JsonProperty("APPLICATION_ID")
-    @NotBlank(message = "Application ID Tidak Terisi")
-    private String applicationId;
+    @JsonProperty("LEADS_ID")
+    @NotBlank(message = "Leads ID Tidak Terisi")
+    private String leadsId;
     @JsonProperty("NIK")
     @NotBlank(message = "NIK Tidak Terisi")
     @Size(min = 15, max = 16, message = "NIK Tidak Sesuai")

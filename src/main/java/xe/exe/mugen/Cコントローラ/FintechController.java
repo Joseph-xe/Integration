@@ -1,8 +1,5 @@
 package xe.exe.mugen.Cコントローラ;
 
-import io.swagger.v3.oas.annotations.media.Content;
-import io.swagger.v3.oas.annotations.media.ExampleObject;
-import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -64,7 +61,7 @@ public class FintechController {
             String fintechRN;
             fintechRN = fintechWorkflow.fintechFlow(
                     fintechRq.getMitraFintech(),
-                    fintechRq.getApplicationId(),
+                    fintechRq.getLeadsId(),
                     fintechRq.getNik(),
                     fintechRq.getKtpName(),
                     fintechRq.getCardName(),

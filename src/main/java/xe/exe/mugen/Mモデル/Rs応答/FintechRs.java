@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class FintechRs {
-    @JsonProperty("REGISTRATION_NUMBER")
-    private String registrationNumber;
+    @JsonProperty("APPLICATION_ID")
+    private String applicationId;
 }

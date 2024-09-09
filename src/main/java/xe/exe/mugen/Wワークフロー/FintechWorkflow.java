@@ -19,7 +19,7 @@ public class FintechWorkflow {
 
     public String fintechFlow(
             String mitra_fintech,
-            String application_id,
+            String leadsId,
             String nik,
             String ktp_name,
             String card_name,
@@ -70,7 +70,7 @@ public class FintechWorkflow {
         }else{
             output = fintechStore.fintechApplication(
                     mitra_fintech,
-                    application_id,
+                    leadsId,
                     nik,
                     ktp_name,
                     card_name,
@@ -109,7 +109,7 @@ public class FintechWorkflow {
             );
             log.info("[{} - {}][SUCCESS SUBMIT]", className, methodName);
         }
-        log.info("[{} - {}][LINK START]", className, methodName);
+        log.info("[{} - {}][LINK END]", className, methodName);
         return output;
     }
 }

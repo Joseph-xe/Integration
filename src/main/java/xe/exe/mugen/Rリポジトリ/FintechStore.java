@@ -53,7 +53,7 @@ public class FintechStore {
 
     public String fintechApplication(
             String mitra_fintech,
-            String application_id,
+            String leadsId,
             String nik,
             String ktp_name,
             String card_name,
@@ -97,7 +97,7 @@ public class FintechStore {
                     .withProcedureName("SP_FINTECH_APPLICATION")
                     .declareParameters(
                             new SqlParameter("IN_MITRA_FINTECH", Types.VARCHAR),
-                            new SqlParameter("IN_APPLICATION_ID", Types.VARCHAR),
+                            new SqlParameter("IN_LEADS_ID", Types.VARCHAR),
                             new SqlParameter("IN_NIK", Types.VARCHAR),
                             new SqlParameter("IN_KTP_NAME", Types.VARCHAR),
                             new SqlParameter("IN_CARD_NAME", Types.VARCHAR),
@@ -138,7 +138,7 @@ public class FintechStore {
                     );
             Map<String, Object> queryExec = simpleJdbcCall.execute(
                     mitra_fintech,
-                    application_id,
+                    leadsId,
                     nik,
                     ktp_name,
                     card_name,
@@ -175,7 +175,7 @@ public class FintechStore {
                     relation_with_emergency_contact,
                     emergency_contact_phone_number
             );
-            String output = (String) queryExec.get("OUT_REGISTRATION_NUMBER");
+            String output = (String) queryExec.get("OUT_APPLICATION_ID");
             log.info("[{} - {}][OUTPUT - {}]", className, methodName, output);
             return output;
         }catch(DataAccessException dataAccessException){
