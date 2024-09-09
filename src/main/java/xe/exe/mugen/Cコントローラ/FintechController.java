@@ -37,15 +37,6 @@ public class FintechController {
     private FintechWorkflow fintechWorkflow;
 
     @PostMapping("/application")
-    @ApiResponse(
-            responseCode = "400",
-            description = "Validasi gagal",
-            content = @Content(mediaType = "application/json",
-                    examples = @ExampleObject(value = """
-                            "validation": {
-                                "nik": "NIK Tidak Sesuai",
-                                "zipCodeHome": "Zip Code Home Tidak Sesuai"
-                              }""")))
     private ResponseEntity<?> fintechAplikan(@Valid @RequestBody FintechRq fintechRq, BindingResult bindingResult){
         String methodName = new Object() {}.getClass().getEnclosingMethod().getName();
         log.info("[{} - {}][LINK START]", className, methodName);
